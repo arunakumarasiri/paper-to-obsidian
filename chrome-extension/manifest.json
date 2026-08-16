@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Paper to Obsidian",
+  "version": "0.2.0",
+  "description": "Extract scholarly metadata and send a paper plus its PDF directly to an Obsidian vault.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://api.crossref.org/*",
+    "http://127.0.0.1/*"
+  ],
+  "optional_host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "action": {
+    "default_title": "Save paper to Obsidian",
+    "default_popup": "popup.html"
+  }
+}

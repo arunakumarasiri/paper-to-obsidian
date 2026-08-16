@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paper to Obsidian</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Paper to Obsidian</h1>
+        <p id="status">Reading this page…</p>
+      </div>
+      <button id="refresh" class="icon" title="Re-read page">↻</button>
+    </header>
+
+    <section class="receiver-card">
+      <div class="row">
+        <label class="grow">
+          Receiver
+          <input id="receiver" type="text" value="http://127.0.0.1:27124">
+        </label>
+        <button id="test" class="compact">Test</button>
+      </div>
+
+      <label>
+        Receiver token
+        <input id="token" type="password" placeholder="Paste token from Obsidian plugin settings">
+      </label>
+    </section>
+
+    <section>
+      <label>
+        Title
+        <textarea id="title" rows="2"></textarea>
+      </label>
+
+      <label>
+        Authors
+        <textarea id="authors" rows="2" placeholder="One author per line"></textarea>
+      </label>
+
+      <div class="two-col">
+        <label>
+          DOI
+          <input id="doi" type="text">
+        </label>
+        <label>
+          Published
+          <input id="published" type="text">
+        </label>
+      </div>
+
+      <label>
+        Journal
+        <input id="journal" type="text">
+      </label>
+
+      <label>
+        Source URL
+        <input id="url" type="text">
+      </label>
+
+      <label>
+        PDF URL
+        <input id="pdf" type="text" placeholder="No direct PDF found">
+      </label>
+    </section>
+
+    <div class="actions">
+      <button id="savePdf" class="primary">Save note + PDF</button>
+      <button id="saveNote">Save note only</button>
+      <button id="openPdf" disabled>Open PDF</button>
+    </div>
+
+    <p class="footnote">
+      The PDF is transferred only to the local Obsidian receiver on this computer.
+    </p>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>
